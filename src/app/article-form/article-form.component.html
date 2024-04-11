@@ -1,0 +1,66 @@
+<form [formGroup]="form">
+  <p>
+    <mat-form-field>
+      <mat-label>CIN</mat-label>
+      <input matInput placeholder="id" formControlName="id" />
+      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+      <mat-hint>Hint</mat-hint>
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field appearance="fill">
+      <mat-label>NAME</mat-label>
+      <input matInput placeholder="type" formControlName="type" />
+      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+      <mat-hint>Hint</mat-hint>
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field appearance="fill">
+      <mat-label>CV</mat-label>
+      <input matInput placeholder="titre" formControlName="titre" />
+      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+      <mat-hint>Hint</mat-hint>
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field>
+      <mat-label>Choose a date</mat-label>
+      <input matInput [matDatepicker]="picker" formControlName="date" />
+      <mat-hint>MM/DD/YYYY</mat-hint>
+      <mat-datepicker-toggle
+        matIconSuffix
+        [for]="picker"
+      ></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field appearance="fill">
+      <mat-label>TYPE</mat-label>
+      <input matInput placeholder="lien" formControlName="lien" />
+      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+      <mat-hint>Hint</mat-hint>
+    </mat-form-field>
+  </p>
+  <!-- <p>
+    <mat-form-field appearance="fill">
+      <mat-label>TYPE</mat-label>
+      <input matInput placeholder="date" formControlName="date" />
+      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+      <mat-hint>Hint</mat-hint>
+    </mat-form-field>
+  </p> -->
+  <p>
+    <mat-form-field appearance="fill">
+      <mat-label>TYPE</mat-label>
+      <input matInput placeholder="sourcepdf" formControlName="sourcepdf" />
+      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+      <mat-hint>Hint</mat-hint>
+    </mat-form-field>
+  </p>
+  <mat-dialog-actions>
+    <button class="mat-raised-button" (click)="close()">Close</button>
+    <button class="mat-raised-button mat-primary" (click)="save()">Save</button>
+  </mat-dialog-actions>
+</form>
